@@ -1,24 +1,24 @@
 import {RouterModule, Routes} from '@angular/router';
-import {DashboardRoutingComponent} from './dashboard-routing.component';
-import {DashboardComponent} from './component';
+import {CalculadoraRoutingComponent} from './calculadora-routing.component';
 import {NgModule} from '@angular/core';
+import {CalculadoraComponent} from './components';
 
-export const DashboarRoutes: Routes = [
+export const CalculadoraRoutes: Routes = [
   {
-    path: 'dashboard',
-    component: DashboardRoutingComponent,
+    path: 'calculadora',
+    component: CalculadoraRoutingComponent,
     children: [{
       path: '',
-      component: DashboardComponent
+      component: CalculadoraComponent
     }]
   }];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(DashboarRoutes)
+    RouterModule.forChild(CalculadoraRoutes)
   ],
   exports: [
     RouterModule,
   ]
 })
-export class DashboardRoutingModule { }
+export class CalculadoraRoutingModule { }

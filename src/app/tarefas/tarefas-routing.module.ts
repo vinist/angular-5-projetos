@@ -1,24 +1,38 @@
-import {Routes} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {ListarTarefaComponent} from './listar';
 import {CadastrarTarefasComponent} from './cadastrar';
 import {EditarTarefaComponent} from './editar';
+import {NgModule} from '@angular/core';
+import {TarefasRoutingComponent} from './tarefas-routing.component';
 
 
 export const TarefaRoutes: Routes = [
   {
     path: 'tarefas',
-    redirectTo: 'tarefas/listar'
-  },
-  {
-    path: 'tarefas/listar',
-    component: ListarTarefaComponent
-  },
-  {
-    path: 'tarefas/cadastrar',
-    component: CadastrarTarefasComponent
-  },
-  {
-    path: 'tarefas/editar/:id',
-    component: EditarTarefaComponent
+    component: TarefasRoutingComponent,
+    children: [
+      {
+        path: '',
+        component: ListarTarefaComponent
+      },
+      {
+        path: 'cadastrar',
+        component: CadastrarTarefasComponent
+      },
+      {
+        path: 'editar/:id',
+        component: EditarTarefaComponent
+      }
+    ]
   }
 ];
+
+@NgModule({
+  imports: [
+    RouterModule.forChild(TarefaRoutes)
+  ],
+  exports: [
+    RouterModule,
+  ]
+})
+export class TarefasRoutingModule { }

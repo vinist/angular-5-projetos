@@ -1,24 +1,24 @@
 import {RouterModule, Routes} from '@angular/router';
-import {CalculadoraRoutingComponent} from './calculadora-routing.component';
+import {ConversorRoutingComponent} from './conversor-routing.component';
 import {NgModule} from '@angular/core';
-import {CalculadoraComponent} from './components';
+import {ConversorComponent} from './components/conversor';
 
-export const CalculadoraRoutes: Routes = [
+export const ConversorRoutes: Routes = [
   {
-    path: 'calculadora',
-    component: CalculadoraRoutingComponent,
+    path: 'conversor',
+    component: ConversorRoutingComponent,
     children: [{
       path: '',
-      component: CalculadoraComponent
+      component: ConversorComponent
     }]
   }];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(CalculadoraRoutes)
+    RouterModule.forChild(ConversorRoutes)
   ],
   exports: [
     RouterModule,
   ]
 })
-export class CalculadoraRoutingModule { }
+export class ConversorRoutingModule { }

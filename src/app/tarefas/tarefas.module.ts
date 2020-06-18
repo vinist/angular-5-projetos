@@ -6,13 +6,22 @@ import {RouterModule} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {CadastrarTarefasComponent} from './cadastrar';
 import {EditarTarefaComponent} from './editar';
+import {TarefasRoutingModule} from './tarefas-routing.module';
+import {TarefasRoutingComponent} from './tarefas-routing.component';
 
 @NgModule({
-  declarations: [ListarTarefaComponent, CadastrarTarefasComponent, EditarTarefaComponent, TarefaConcluidaDirective],
+  declarations: [
+    ListarTarefaComponent,
+    CadastrarTarefasComponent,
+    EditarTarefaComponent,
+    TarefaConcluidaDirective,
+    TarefasRoutingComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    TarefasRoutingModule,
   ],
   providers: [TarefaService]
 })

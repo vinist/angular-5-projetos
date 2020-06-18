@@ -1,24 +1,24 @@
 import {RouterModule, Routes} from '@angular/router';
-import {JogoDaVelhaRoutingComponent} from './jogo-da-velha-routing.component';
+import {DashboardRoutingComponent} from './dashboard-routing.component';
 import {NgModule} from '@angular/core';
-import {JogoDaVelhaComponent} from './jogo-da-velha.component';
+import {DashboardComponent} from './components';
 
-export const JogoDaVelhaRoutes: Routes = [
+export const DashboardRoutes: Routes = [
   {
-    path: 'jogo-da-velha',
-    component: JogoDaVelhaRoutingComponent,
+    path: 'dashboard',
+    component: DashboardRoutingComponent,
     children: [{
       path: '',
-      component: JogoDaVelhaComponent
+      component: DashboardComponent
     }]
   }];
 
 @NgModule({
   imports: [
-    RouterModule.forChild(JogoDaVelhaRoutes)
+    RouterModule.forChild(DashboardRoutes)
   ],
   exports: [
     RouterModule,
   ]
 })
-export class JogoDaVelhaRoutingModule { }
+export class DashboardRoutingModule { }

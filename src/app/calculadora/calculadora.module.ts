@@ -2,14 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CalculadoraComponent } from './components';
 import {CalculadoraService} from './services';
+import {CalculadoraRoutingModule} from './calculadora-routing.module';
+import {CalculadoraRoutingComponent} from './calculadora-routing.component';
 
 @NgModule({
-  declarations: [CalculadoraComponent],
+  declarations: [
+    CalculadoraComponent,
+    CalculadoraRoutingComponent,
+  ],
   exports: [
-    CalculadoraComponent
+    CalculadoraComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CalculadoraRoutingModule,
   ],
   providers: [
     CalculadoraService

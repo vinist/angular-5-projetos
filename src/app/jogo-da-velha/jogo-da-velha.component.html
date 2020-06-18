@@ -4,7 +4,7 @@
   <!-- tela inicial -->
   <div class="principal" *ngIf="showInicio">
     <a href="#"
-       (click)="iniciarJogo()"
+       (click)="iniciarJogo($event)"
        class="botao">
       Iniciar
     </a>
@@ -76,7 +76,7 @@
     <p *ngIf="jogador == 0">O jogo terminou empatado...</p>
     <br />
     <a href="#"
-       (click)="novoJogo()"
+       (click)="novoJogo($event)"
        class="botao">
          Jogar novamente
       </a>

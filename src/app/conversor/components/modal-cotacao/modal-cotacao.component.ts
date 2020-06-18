@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {ConversorService} from "../../service";
-import {ConversaoModel, ConversaoResponseModel} from "../../models";
+import {ConversorService} from '../../service';
+import {ConversaoModel, ConversaoResponseModel} from '../../models';
 
 @Component({
   selector: 'app-modal-cotacao',
